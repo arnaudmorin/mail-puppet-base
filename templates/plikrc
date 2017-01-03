@@ -1,0 +1,2 @@
+Token = "<%= @plik_token %>"
+Url = "<%= @plik_url %>"

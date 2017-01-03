@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ ! -z $1 ] ; then
+    plik -s $1
+else
+    echo "Usage: secure-upload file" >&2
+fi
