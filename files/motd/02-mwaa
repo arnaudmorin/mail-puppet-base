@@ -1,0 +1,10 @@
+#!/bin/bash
+
+IFS=''
+read -r -d '' VAR <<'EOF'
+
+                                 Mwaaaaaa !!!!!!!!!
+
+EOF
+
+echo "$VAR" | toilet --gay -f term
