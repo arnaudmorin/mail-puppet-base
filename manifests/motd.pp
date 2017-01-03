@@ -10,7 +10,7 @@ class base::motd {
     recurse => true,
     force   => true,
     purge   => true,
-    source  => "puppet:///modules/motd/${module_name}/",
+    source  => "puppet:///modules/${module_name}/motd/",
     mode    => '0755',
     owner   => 'root',
     group   => 'root',
