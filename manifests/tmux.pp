@@ -26,7 +26,7 @@ class base::tmux {
 
   file { '/usr/local/bin/tmux.sh':
     ensure  => present,
-    source  => 'puppet:///modules/${module_name}/tmux/tmux.sh',
+    source  => "puppet:///modules/${module_name}/tmux/tmux.sh",
   }
 
   # Set some aliases
