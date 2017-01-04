@@ -14,9 +14,6 @@ class base {
   package { 'lnav':
     ensure  => latest,
   }
-  package { 'fail2ban':
-    ensure => latest,
-  }
   package { 'vim-puppet':
     ensure => latest,
   }
