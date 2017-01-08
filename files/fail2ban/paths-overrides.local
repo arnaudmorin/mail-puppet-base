@@ -1,0 +1,4 @@
+# Managed by puppet
+
+[DEFAULT]
+syslog_mail_warn = /var/log/mail.log
