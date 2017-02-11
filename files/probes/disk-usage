@@ -1,0 +1,27 @@
+#!/bin/bash
+
+source /usr/local/status/lib/status
+[[ $? -ne 0 ]] && exit 1
+
+
+function check
+{
+    status.log "[INFO] Checking if disk usage is good"
+    status.set $STATUS_OK
+    ipcent=$(df --output='ipcent' / | tail -1 | tr '%' ' ' | awk '{print $1}')
+    pcent=$(df --output='pcent' / | tail -1 | tr '%' ' ' | awk '{print $1}')
+    if [[ $ipcent > 70 ]]; then
+        status.set $STATUS_WARNING
+    fi
+    if [[ $pcent > 70 ]]; then
+        status.set $STATUS_WARNING
+    fi
+    if [[ $ipcent > 90 ]]; then
+        status.set $STATUS_ERROR
+    fi
+    if [[ $pcent > 90 ]]; then
+        status.set $STATUS_ERROR
+    fi
+}
+
+status.run check
