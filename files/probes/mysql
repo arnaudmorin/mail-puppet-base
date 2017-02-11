@@ -1,0 +1,13 @@
+#!/bin/bash
+
+source /usr/local/status/lib/status
+[[ $? -ne 0 ]] && exit 1
+
+
+function check
+{
+    status.log "[INFO] Checking if mysql is running"
+    systemctl --quiet is-active mysql && status.set $STATUS_OK || status.set $STATUS_ERROR
+}
+
+status.run check
