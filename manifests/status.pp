@@ -23,8 +23,8 @@ class base::status {
   status::probe { 'opendkim':
     source  => "puppet:///modules/${module_name}/probes/opendkim",
   }
-  status::probe { 'php7.0-fpm':
-    source  => "puppet:///modules/${module_name}/probes/php7.0-fpm",
+  status::probe { 'php-fpm':
+    source  => "puppet:///modules/${module_name}/probes/php-fpm",
   }
   status::probe { 'postfix':
     source  => "puppet:///modules/${module_name}/probes/postfix",
