@@ -16,7 +16,7 @@ server {
 
     root /var/www/html;
 
-    ssl_certificate /etc/letsencrypt/live/mailops.fr/cert.pem;
+    ssl_certificate /etc/letsencrypt/live/mailops.fr/fullchain.pem;
     ssl_certificate_key /etc/letsencrypt/live/mailops.fr/privkey.pem;
     ssl_protocols       TLSv1 TLSv1.1 TLSv1.2;
     ssl_ciphers         HIGH:!aNULL:!MD5;
