@@ -35,11 +35,12 @@ class base::status {
   status::probe { 'puppetmaster':
     source  => "puppet:///modules/${module_name}/probes/puppetmaster",
   }
-  status::probe { 'spamd':
-    source  => "puppet:///modules/${module_name}/probes/spamd",
-  }
   status::probe { 'disk-usage':
     source  => "puppet:///modules/${module_name}/probes/disk-usage",
+  }
+  # TODO: remove this, added on 04/08/2017
+  status::probe { 'spamd':
+    ensure  => absent,
   }
 } 
 
