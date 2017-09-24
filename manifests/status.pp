@@ -38,9 +38,5 @@ class base::status {
   status::probe { 'disk-usage':
     source  => "puppet:///modules/${module_name}/probes/disk-usage",
   }
-  # TODO: remove this, added on 04/08/2017
-  status::probe { 'spamd':
-    ensure  => absent,
-  }
 } 
 
